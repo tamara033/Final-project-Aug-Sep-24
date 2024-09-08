@@ -1,0 +1,15 @@
+1. cd ~
+2. mkdir folder_name
+3. cd folder_name
+4. touch new_file.txt #расшиение файла указывается после точки, в моем примере я создала текстовый файл; если нужно создать несколько файлов, нужно перечислить их через пробел
+5. vim new_file.txt #shift + i перейти в режим редактирования теста с начала строки
+6. Esc + :wq
+7. grep -E "слово|сочетание" new_file.txt
+8. grep -E "слово|сочетание" new_file.txt > forwarded.txt
+9. ls
+10. ls -a
+11. pwd
+12. mkdir folder1 folder2 
+#перейти в первую папку: cd folder1 
+#создать в папке файл: touch folder1_file.txt 
+#скопировать и перенести этот файл во вторую папку: cp folder1_file.txt/folder2
