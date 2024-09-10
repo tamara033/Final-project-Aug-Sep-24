@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "91a0bce6-a581-4d59-92ec-43a43b4f3766",
+		"name": "Final-project-Aug-Sep-24",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35151832",
+		"_collection_link": "https://tamara-7360.postman.co/workspace/Tamara-Workspace~96a61e07-c081-4b74-8903-77ea46166b6f/collection/35151832-91a0bce6-a581-4d59-92ec-43a43b4f3766?action=share&source=collection_link&creator=35151832"
+	},
+	"item": [
+		{
+			"name": "Create new user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 100200,\r\n  \"username\": \"Claudia\",\r\n  \"firstName\": \"Claudia\",\r\n  \"lastName\": \"White\",\r\n  \"email\": \"ClaudiaB@gmail.com\",\r\n  \"password\": \"1\",\r\n  \"phone\": \"+442034567\",\r\n  \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/user",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updated user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 100200,\r\n  \"username\": \"Claudia\",\r\n  \"firstName\": \"Claudia\",\r\n  \"lastName\": \"White\",\r\n  \"email\": \"ClaudiaWhite@gmail.com\",\r\n  \"password\": \"1\",\r\n  \"phone\": \"string\",\r\n  \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base_URL}}/user/Claudia",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"user",
+						"Claudia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/user/login?username=Claudia&password=1",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Claudia"
+						},
+						{
+							"key": "password",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/user/Claudia",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"user",
+						"Claudia"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
