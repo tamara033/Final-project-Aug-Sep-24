@@ -1,0 +1,39 @@
+Tamara@DESKTOP-C4FE4Q2 MINGW64 ~
+
+Final-project-Aug-Sep-24
+
+→ Create new user
+  POST https://petstore.swagger.io/v2/user [200 OK, 374B, 592ms]
+  √  Status code is 200
+
+→ Updated user
+  PUT https://petstore.swagger.io/v2/user/Claudia [200 OK, 374B, 143ms]
+  √  Status code is 200
+
+→ User Login
+  GET https://petstore.swagger.io/v2/user/login?username=Claudia&password=1 [200 OK, 471B, 148ms]
+  √  Status code is 200
+
+→ Delete user
+  DELETE https://petstore.swagger.io/v2/user/Claudia [200 OK, 375B, 136ms]
+  √  Status code is 200
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                   4 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                   4 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                   0 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                   4 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 1390ms                                         │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 223B (approx)                                 │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 254ms [min: 136ms, max: 592ms, s.d.: 194ms] │
+└────────────────────────────────────────────────────────────────────┘
